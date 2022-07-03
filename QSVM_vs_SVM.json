@@ -6,7 +6,7 @@
 			"feature_dim" : 2, 
 			"gap" : 0.3
 		},
-		" Quantum Kernel Estimation": {
+		"Quantum Kernel Estimation": {
 			"ZFeatureMap" : {
 				"Testing success ratio": 0.75,
 				"Prediction from datapoints set": {
@@ -26,11 +26,11 @@
 		},
 		"VQC" : {
 			"ZFeatureMap" : {
-				"Testing success ratio": 0,
+				"Testing success ratio": 0.55,
 				"Prediction from datapoints set": {
 					"ground truth" : ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
-					"prediction" :   [],
-					"success rate" : "0"
+					"prediction" :   ["B", "A", "A", "B", "B", "A", "B", "A", "A", "A", "A", "B", "B", "A", "A", "B", "A", "A", "A", "A"],
+					"success rate" : "45.0%"
 				}
 			},
 			"ZZFeatureMap" : {
