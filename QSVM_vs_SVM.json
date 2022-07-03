@@ -4,13 +4,13 @@
 			"training_size" : 20, 
 			"test_size" : 10, 
 			"feature_dim" : 2, 
-			"gap" : 0.3
+			"gap" : 0.3,
+			"unseen-data" : ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"]
 		},
 		"Quantum Kernel Estimation": {
 			"ZFeatureMap" : {
 				"Testing success ratio": 0.75,
 				"Prediction from datapoints set": {
-					"ground truth" : ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
 					"prediction" :   ["A", "A", "A", "B", "A", "A", "B", "B", "A", "A", "B", "B", "B", "A", "A", "A", "B", "A", "B", "B"],
 					"success rate" : "65.0%"
 				}
@@ -18,7 +18,6 @@
 			"ZZFeatureMap" : {
 				"Testing success ratio": 1.0,
 				"Prediction from datapoints set":{
-					"ground truth": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
 					"prediction":   ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
 					"success rate": "100.0%"
 				}
@@ -28,7 +27,6 @@
 			"ZFeatureMap" : {
 				"Testing success ratio": 0.55,
 				"Prediction from datapoints set": {
-					"ground truth" : ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
 					"prediction" :   ["B", "A", "A", "B", "B", "A", "B", "A", "A", "A", "A", "B", "B", "A", "A", "B", "A", "A", "A", "A"],
 					"success rate" : "45.0%"
 				}
@@ -36,7 +34,6 @@
 			"ZZFeatureMap" : {
 				"Testing success ratio": 0.9,
 				"Prediction from datapoints set":{
-					"ground truth": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
 					"prediction":   ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
 					"success rate": "100.0%"
 				}
@@ -45,9 +42,97 @@
 		"Classical SVM" : {
 			"Testing success ratio": 0.65,
 			"Prediction from datapoints set": {
-				"ground truth": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
 				"prediction":   ["B", "A", "A", "A", "B", "B", "B", "B", "A", "A", "A", "B", "B", "B", "A", "B", "A", "B", "B", "A"],
 				"success rate": "55.0%"
+			}
+		}
+	},
+	"Iris" : {
+		"Details": {
+			"training_size" : 25, 
+			"test_size" : 15, 
+			"feature_dim" : 4, 
+			"unseen-data" : ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B"]
+		},
+		"Quantum Kernel Estimation": {
+			"ZFeatureMap" : {
+				"Testing success ratio": 1.0,
+				"Prediction from datapoints set": {
+					"prediction":   ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+					"success rate": "100.0%"
+				}
+			},
+			"ZZFeatureMap" : {
+				"Testing success ratio": 0.8333333333333334,
+				"Prediction from datapoints set":{
+					"prediction":   ["A", "A", "A", "B", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "A", "A", "B", "B"],
+					"success rate": "73.6842105263158%"
+				}
+			},
+			"Pauli-linear" : {
+				"Testing success ratio": 0.8,
+				"Prediction from datapoints set":{
+					"prediction":   ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "A", "B", "B", "B", "B", "B", "B", "B"],
+					"success rate": "94.73684210526316%"
+				}
+			},
+			"Pauli-full" : {
+				"Testing success ratio": 0.8333333333333334,
+				"Prediction from datapoints set":{
+					"prediction":   ["A", "A", "A", "B", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "A", "A", "B", "B"],
+					"success rate": "73.6842105263158%"
+				}
+			},
+			"Pauli-circular" : {
+				"Testing success ratio": 0.8333333333333334,
+				"Prediction from datapoints set":{
+					"prediction":   ["B", "A", "A", "B", "A", "A", "A", "B", "B", "A", "A", "B", "B", "A", "B", "B", "A", "B", "B"],
+					"success rate": "63.1578947368421%"
+				}
+			}
+		},
+		"VQC": {
+			"ZFeatureMap" : {
+				"Testing success ratio": 1.0,
+				"Prediction from datapoints set": {
+					"prediction":   ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+					"success rate": "100.0%"
+				}
+			},
+			"ZZFeatureMap" : {
+				"Testing success ratio": 0.7,
+				"Prediction from datapoints set":{
+					"prediction":   ["A", "A", "A", "B", "A", "A", "B", "A", "B", "B", "B", "B", "B", "B", "B", "A", "A", "A", "B"],
+					"success rate": "63.1578947368421%"
+				}
+			},
+			"Pauli-linear" : {
+				"Testing success ratio": 0.5666666666666667,
+				"Prediction from datapoints set":{
+					"prediction":   ["A", "A", "B", "B", "B", "B", "A", "B", "B", "A", "B", "A", "B", "A", "B", "A", "B", "B", "B"],
+					"success rate": "52.63157894736842%"
+				}
+			},
+			"Pauli-full" : {
+				"Testing success ratio": 0.5666666666666667,
+				"Prediction from datapoints set":{
+					"prediction":   ["A", "A", "A", "A", "A", "B", "B", "A", "B", "B", "B", "A", "B", "B", "A", "B", "A", "A", "B"],
+					"success rate": "57.89473684210526%"
+				}
+			},
+			"Pauli-circular" : {
+				"Testing success ratio": 0.6666666666666666,
+				"Prediction from datapoints set":{
+					"prediction":   ["A", "A", "B", "B", "A", "B", "A", "B", "B", "B", "B", "B", "B", "A", "B", "A", "A", "B", "B"],
+					"success rate": "52.63157894736842%"
+				}
+			}
+		},
+		"Classical SVM" : {
+			"Testing success ratio": 1.0,
+			"Prediction from datapoints set": {
+				"prediction":   ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+				"success rate": "100.0%"
 			}
 		}
 	}
