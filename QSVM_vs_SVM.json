@@ -1,0 +1,54 @@
+{
+	"Adhoc Data" : {
+		"Details": {
+			"training_size" : 20, 
+			"test_size" : 10, 
+			"feature_dim" : 2, 
+			"gap" : 0.3
+		},
+		" Quantum Kernel Estimation": {
+			"ZFeatureMap" : {
+				"Testing success ratio": 0.75,
+				"Prediction from datapoints set": {
+					"ground truth" : ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+					"prediction" :   ["A", "A", "A", "B", "A", "A", "B", "B", "A", "A", "B", "B", "B", "A", "A", "A", "B", "A", "B", "B"],
+					"success rate" : "65.0%"
+				}
+			},
+			"ZZFeatureMap" : {
+				"Testing success ratio": 1.0,
+				"Prediction from datapoints set":{
+					"ground truth": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+					"prediction":   ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+					"success rate": "100.0%"
+				}
+			}
+		},
+		"VQC" : {
+			"ZFeatureMap" : {
+				"Testing success ratio": 0,
+				"Prediction from datapoints set": {
+					"ground truth" : ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+					"prediction" :   [],
+					"success rate" : "0"
+				}
+			},
+			"ZZFeatureMap" : {
+				"Testing success ratio": 0.9,
+				"Prediction from datapoints set":{
+					"ground truth": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+					"prediction":   ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+					"success rate": "100.0%"
+				}
+			}
+		},
+		"Classical SVM" : {
+			"Testing success ratio": 0.65,
+			"Prediction from datapoints set": {
+				"ground truth": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+				"prediction":   ["B", "A", "A", "A", "B", "B", "B", "B", "A", "A", "A", "B", "B", "B", "A", "B", "A", "B", "B", "A"],
+				"success rate": "55.0%"
+			}
+		}
+	}
+}
